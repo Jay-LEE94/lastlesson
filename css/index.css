@@ -1,0 +1,82 @@
+@import url('./reset.css');
+
+:root{
+    --page-width:1536px;
+}
+
+header{
+    width:var(--page-width); margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 0;
+}
+header > h1{
+    font-family: 'Inter', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Prociono', serif;}
+header > h1 > a{}
+header > nav{
+    font-family: 'Pretendard';
+    font-weight: 700;
+}
+header > nav > a{
+    padding:20px;
+}
+header > div{}
+header > div > a{}
+
+main{
+    width:var(--page-width);
+}
+.banner{
+    height: 626px;
+    position: relative;
+    display:flex;
+}
+.banner > img{
+    width:100%
+    
+}
+.banner > figcaption{
+    position: absolute;
+    width:100%; height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.banner > figcaption > p{
+    color: #5E452D;
+    text-align: center;
+    animation: txt 1s forwards;
+}
+.banner > figcaption > p:nth-of-type(1){
+    text-transform: uppercase;
+    font-family: 'Prociono', serif;
+    font-size: 3.25rem;
+    /* rem은 기본 폰트사이즈 배수, em은 부모 폰트의 사이즈 배수 */
+    line-height: 1.5;
+}
+.banner > figcaption > p:nth-of-type(2){
+    font-family: 'Pretendard';
+    font-size: 1.375rem;
+    font-weight: 500;
+    animation: txt 1s 0.17s forwards;
+    transform: translateY(0%);
+    opacity: 0;
+}
+@keyframes txt{
+    0%{transform: translateY(100%);
+        opacity: 0;
+    }
+    100%{transform:translateY(0%);
+        opacity: 1;
+    }
+}
+
+footer{
+    width:var(--page-width);
+}
